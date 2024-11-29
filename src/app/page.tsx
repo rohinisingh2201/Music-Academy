@@ -8,6 +8,10 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 
 //used aceternity UI Lib - npm run dev
 
+if(process.env.NODE_ENV != "production") { //when in dev phase require that otherwise while deploying do not use 
+  require("dotenv").config()
+}
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-black/[0.96] antialiased bg-grid-white/[0.02]">
